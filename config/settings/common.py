@@ -17,6 +17,11 @@ APPS_DIR = ROOT_DIR.path('mozio_providers')
 
 env = environ.Env()
 
+try:
+    env.read_env(ROOT_DIR.file('.env'))
+except FileNotFoundError:
+    pass
+
 # APP CONFIGURATION
 # ------------------------------------------------------------------------------
 DJANGO_APPS = (
@@ -109,7 +114,7 @@ MANAGERS = ADMINS
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#databases
 DATABASES = {
     # Raises ImproperlyConfigured exception if DATABASE_URL not in os.environ
-    'default': env.db('DATABASE_URL', default='postgis://newuser:sudip@LOCALHOST:5432/mozio_providers'),
+    'default': env.db('DATABASE_URL', default='postges://mozio_providers'),
 }
 DATABASES['default']['ATOMIC_REQUESTS'] = True
 
