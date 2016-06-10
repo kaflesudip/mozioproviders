@@ -9,6 +9,8 @@ CURRENCY_CHOICES = [(currency.letter, currency.name) for currency in list(pycoun
 
 
 class Provider(models.Model):
+    """This model stores information on providers."""
+
     name = models.CharField(max_length=300)
     email = models.EmailField()
     phone_no = PhoneNumberField()
@@ -17,3 +19,6 @@ class Provider(models.Model):
         max_length=10,
         choices=CURRENCY_CHOICES
     )
+
+    def __str__(self):
+        return self.name
