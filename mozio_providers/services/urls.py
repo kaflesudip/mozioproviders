@@ -20,4 +20,10 @@ urlpatterns = [
         name='servicearea_collection'
     ),
 
+    url(
+        regex=r'^(?P<pk>[0-9]+)$',
+        view=views.ServiceAreaMember.as_view(),
+        name='servicearea_member'
+    ),
+
 ]
