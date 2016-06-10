@@ -8,7 +8,8 @@ from .serializers import ServiceAreaSerializer
 
 
 class ServiceAreaCollection(generics.ListAPIView):
-"""Lists all Services in which the point lies within the given polygon."""
+    """Lists all Services in which the point lies within the given polygon."""
+
     serializer_class = ServiceAreaSerializer
 
     def get_queryset(self):
