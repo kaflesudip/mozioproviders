@@ -15,7 +15,7 @@ urlpatterns = [
     ),
 
     url(
-        regex=r'(?P<lat>[0-9]+)/(?P<lon>[0-9]+)/^$',
+        regex=r'^(?P<lon>(\d+(?:\.\d+)?))/(?P<lat>(\d+(?:\.\d+)?))/$',
         view=views.ServiceAreaCollection.as_view(),
         name='servicearea_collection'
     ),
