@@ -7,6 +7,7 @@ This app provides API for both Providers and Services Areas. CRUD operations can
 ### Create a provider:
 
 A new provider can be created py providing name, email, phone_no, language, currency.
+
 1. Email must be a valid Email.
 2. Phone number must include country code. e.g. +11232323232
 3. Language is a RFC-3066 Language Code. More details can be found on [http://www.i18nguy.com/unicode/language-identifiers.html](http://www.i18nguy.com/unicode/language-identifiers.html)
@@ -30,6 +31,7 @@ Refer [API documentation](http://ec2-52-91-71-216.compute-1.amazonaws.com/api/do
 ### Create a service.
 
 A new service can be created by poviding provider, name, price and polygon.
+
 1. `provider` is the id of already created provider.
 2. `name` is the name of Service Area.
 3. `price` is a floating-point number repesenting the price.
